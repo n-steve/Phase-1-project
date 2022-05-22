@@ -1,54 +1,68 @@
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-    const newForm = document.getElementById('form')
-    newForm.addEventListener('submit',(event)=>
-    {
-        event.preventDefault();
-        printResult(event)
-        
-    })
+    const newForm = document.querySelector('form')
+   
 
-
-
-    function printResult(element){
-        const p = document.createElement("p")
-        const chosenFilm = document.createElement('ul')
-        p.textContent = `${element.target.text.value}`
-        chosenFilm.textCotent = 'List of Chosen Films'
-        p.appendChild(chosenFilm)
-        document.body.appendChild(p)
-    }
-
-    
-
-
-    
-    return fetch("https://ghibliapi.herokuapp.com/films")
+   return fetch("https://ghibliapi.herokuapp.com/films")
     .then(response=>response.json())
-    .then(data =>
+    .then(data=>{
+
+
+        let foundMovie;
+
+
+        newForm.addEventListener('submit',(event)=>
         {
-            const list = document.createElement('li')
-            list.innerHTMl = data.list
-            document.body.appendChild(list)
+            event.preventDefault()
+            
+           const target = event.target.textBox.value
+           
+           
+           for(const element of data){
+               
+               if(target.toLowerCase().replace(/\s/g, '') === element.title.toLowerCase().replace(/\s/g, ''))
+               {
+
+               foundMovie = element
+               
+               }
+           }
+           if (foundMovie !== null) {
+            const p = document.createElement('p')
+            const p2 = document.createElement('p')
+            p2.textContent = foundMovie?.title
+            p.textContent = foundMovie?.description
+            document.body.appendChild(p2)
+            document.body.appendChild(p)
+            }
+        
+           foundMovie = null
+        
         })
 
-        function clearResult(event){
-            event.target.parentNode.remove()
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      
+    })
+  
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
