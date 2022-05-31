@@ -1,63 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="styles.css" />
 
-
-<title>Studio Ghibli Films!</title>
-<body>
-    
+  <title>Studio Ghibli Films!</title>
+  <body>
     <h1>Discover Studio Ghibli!</h1>
-        <form id="'newform">
-            <p>
-            <input type="text" name="textBox" id="textBox-input" placeholder="Enter a Studio Ghibli Film">
-            <button type="submit" id="submit">Submit</button>
-           
-            </p>
-            </form>
-            <table>
-              <tr>
-                <td><section id="center">
-                  <div id="list" class="print"></div>
-                  <div class="card" style="width: 18rem;" id="please">
-                      <img src="logo.png" class="card-img-top" alt="..." id="image">
-                      <div class="card-body">
-                        <p class="card-text" id="originaltitle"></p>
-                        <p class="card-title" id="card-title"></p>
-                        <p class="card-text" id="releasedate"></p>
-                        <p class="card-text" id="director"></p>
-                        <p class="card-text" id="descriptions"></p>
-                        <button type="button" id="likes">🤍</button>
-                      </div>
-                    </div>
-                  </section></td>
+    <form id="'newform">
+      <p>
+        <input
+          type="text"
+          name="textBox"
+          id="textBox-input"
+          placeholder="Enter a Studio Ghibli Film"
+        />
+        <button type="submit" id="submit">Submit</button>
+      </p>
+    </form>
+    <table>
+      <tr>
+        <td>
+          <section id="center">
+            <div id="list" class="print"></div>
+            <div class="card" style="width: 18rem" id="please">
+              <img src="logo.png" class="card-img-top" alt="..." id="image" />
+              <div class="card-body">
+                <p class="card-text" id="originaltitle"></p>
+                <p class="card-title" id="card-title"></p>
+                <p class="card-text" id="releasedate"></p>
+                <p class="card-text" id="director"></p>
+                <p class="card-text" id="descriptions"></p>
+                <button type="button" id="likes">🤍</button>
+              </div>
+            </div>
+          </section>
+        </td>
 
+        <td>
+          <ul id="list1">
+            Search History
+          </ul>
+        </td>
+      </tr>
+    </table>
 
-                <td><ul id="list1">Search History
-                  
-                </ul></td>
-                </tr>
-            </table>
-
-
-
-            
-            
-
-              
-            
-
- 
-<script src="main.js"></script>
-
-
-
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
